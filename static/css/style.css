@@ -1,0 +1,27 @@
+/*bootstrap specific*/
+.has-error{
+	background-color:#DEA2A8;
+}
+
+.container {
+	width : 1080px;
+}
+
+/* landing */
+#landfirst {
+	width : 100%;
+	height : 600px;
+}
+
+#landsecond {
+	width : 100%;
+	height : 200px;
+	padding-top : 10px;
+	background-color:#95BFCC;
+}
+
+#landthird {
+	width : 100%;
+	height : 50px;
+	background-color : #445459;
+}
