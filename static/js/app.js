@@ -21,6 +21,11 @@ app.config(function($routeProvider){
 		.otherwise({ redirectTo: '/landing' })
 });
 
+//universal settings
+app.run(function($rootScope){
+	$rootScope.username = '';
+});
+
 //universal controller
 app.controller('mainControl', mainControl );
 

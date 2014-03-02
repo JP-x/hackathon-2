@@ -51,7 +51,7 @@ function dashboardControl ($scope) {
 	};
 }
 
-function mainControl ($scope) {
+function mainControl ($scope, $http) {
 	//class to add to text box if there is an error with 
 	//login in
 	$scope.status = "";
@@ -59,14 +59,22 @@ function mainControl ($scope) {
 	$scope.email = "";
 	$scope.password = "";
 
-	$scope.signIn = function () {
-		$scope.status = "has-error";
-		window.setTimeout( function(){
-			$scope.$apply(function(){
-				$scope.status = "";
+	$scope.signIn = function login () {
+		$http.post('/login', {password : $scope.password, email : $scope.email})
+			.success( function( data, headers, status, config ){
+				var user = $scope.email.split("@");
+				$rootScope.username = user[0];
+				$location.path("/dashboard");
+			})
+			.error ( function( data, headers, status, config){
+				$scope.status = "has-error";
+				window.setTimeout( function(){
+					$scope.$apply(function(){
+					$scope.status = "";
+					});
+				}, 150);
+
 			});
-		}, 150);
 	}
-		
 }
 
