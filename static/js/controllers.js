@@ -15,7 +15,29 @@ function dashboardControl ($scope) {
 	
 	$scope.tasks = [];
 	$scope.task = new taskObj ();
+	$scope.charIcon = "../assets/cowmove.gif";
 
+	$scope.setChar = function( str ){
+		switch(str){
+			case "MCOW":
+				$scope.charIcon = "../assets/cowmove.gif";
+				break;
+			case "PCOW":
+				$scope.charIcon = "../assets/cow_purp.png";
+				break;
+			case "PIG":
+				$scope.charIcon = "../assets/piggy.png";
+				break;
+			case "KNIGHT":
+				$scope.charIcon = "../assets/knightsm.png";
+				break;
+			case "FENCE":
+			$scope.charIcon = "../assets/fence.png";
+			break;
+			default:
+				$scope.charIcon = "../assets/cowmove.gif";
+		}
+	}
 	$scope.addTask = function () {
 		var tmp = new taskObj();
 		

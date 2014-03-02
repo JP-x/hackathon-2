@@ -1,3 +1,43 @@
+
+<div class ='rows'>
+
+<div align="center" class = 'col-md-6'>
+<div class="jumbotron">
+	<div id = "stat_font">
+		<!--PLACE USER CHARACTER HERE-->
+		<img ng-src='{{charIcon}}'></img>
+		<!--BUTTON TO CHOOSE CHARACTER-->
+			<div class="btn-group">
+		    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		      Char Select
+		      <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		      <li><a ng-click='setChar("MCOW")'>White Cow </a></li>
+		      <li><a ng-click='setChar("PCOW")'>Purple Cow</a></li>
+		      <li><a ng-click='setChar("PIG")'>Pig Ninja</a></li>
+		      <li><a ng-click='setChar("KNIGHT")'>Knight</a></li>
+		      <li><a ng-click='setChar("FENCE")'>Fence</a></li>
+		    </ul>
+  			</div>
+
+ 	 	<h3>Stats</h3>
+  		<p>...</p>
+
+  		<p>Level: 5</p>
+  		<p>Experience</p>
+	</div>
+<div class="progress progress-striped active">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+<div align="center" class = 'col-md-6'>
 <div id='task-container'>
 	<div id='task-list'>
 		<ul class='list-group' ng-repeat='t in tasks track by $index'>
@@ -18,4 +58,7 @@
 
 	<input type="text" class="form-control" id = 'task-description' ng-model='task.description'>
 	<button class='btn btn-default' ng-click='addTask()'>Insert Task</button>
+</div>
+</div>
+
 </div>
