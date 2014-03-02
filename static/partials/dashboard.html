@@ -1,0 +1,21 @@
+<div id='task-container'>
+	<div id='task-list'>
+		<ul class='list-group' ng-repeat='t in tasks track by $index'>
+			<li class='list-group-item list-group-item-success'>
+				<h1>{{t.time.getUTCHours()}}</h1>
+				<p>{{t.description}}</p>
+			</li>
+		</ul>
+	<!-- task.description exp time .addTask -->
+	</div>
+
+	<div class="input-group">
+		<span class="input-group-addon">Task</span>
+		<input type="text" class="form-control" ng-model='task.hour'>
+	</div>
+
+	<input type="text" class="form-control" ng-model='task.minute'>
+
+	<input type="text" class="form-control" id = 'task-description' ng-model='task.description'>
+	<button class='btn btn-default' ng-click='addTask()'>Insert Task</button>
+</div>

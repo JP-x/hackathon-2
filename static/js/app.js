@@ -9,10 +9,16 @@ app.config(function($routeProvider){
 			controller: 'landingControl'
 		})
 
+		.when('/dashboard-:user', {
+			templateUrl: 'partials/dashboard.html',
+			controller: 'dashboardControl'
+		})
+
 		.otherwise({ redirectTo: '/landing' })
 });
 
 //universal controller
 app.controller('mainControl', mainControl );
-app.controller( 'landingControl', landingControl );
+app.controller('landingControl', landingControl );
+app.controller('dashboardControl', dashboardControl);
 })();
