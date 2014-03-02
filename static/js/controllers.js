@@ -23,16 +23,16 @@ function dashboardControl ($scope) {
 				$scope.charIcon = "../assets/cowmove.gif";
 				break;
 			case "PCOW":
-				$scope.charIcon = "../assets/cow_purp.png";
+				$scope.charIcon = "../assets/purp_run.gif";
 				break;
 			case "PIG":
-				$scope.charIcon = "../assets/piggy.png";
+				$scope.charIcon = "../assets/pig_g.gif";
 				break;
 			case "KNIGHT":
-				$scope.charIcon = "../assets/knightsm.png";
+				$scope.charIcon = "../assets/knight_g.gif";
 				break;
 			case "FENCE":
-			$scope.charIcon = "../assets/fence.png";
+			$scope.charIcon = "../assets/fence_g.gif";
 			break;
 			default:
 				$scope.charIcon = "../assets/cowmove.gif";
