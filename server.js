@@ -1,6 +1,6 @@
 var express = require('express'),
-	app = express(),
-	grid = require('./grid');
+	app = express();
+	//grid = require('./grid');
 
 //use static files
 app.use( express.static( __dirname + "/static" ) );
