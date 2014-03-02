@@ -45,7 +45,7 @@
 				<h4>Set Alert Time: {{t.time.getUTCHours()}}h {{t.time.getUTCMinutes()}}m</h4>
 				<p><strong>Mission: </strong>{{t.description}}</p>
 				<p><strong>Exp: </strong>{{t.exp}}</p>
-				<button type="rm" class="btn btn-danger" >Remove</button>
+				<button class= 'btn btn-danger'   ng-click = 'rmTask(t)' >Remove</button>
 			</li>
 		</ul>
 

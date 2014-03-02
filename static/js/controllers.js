@@ -52,6 +52,14 @@ function dashboardControl ($scope) {
 		$scope.tasks.push ( tmp );
 	};
 
+
+	$scope.rmTask = function(taskObj){
+		var index = $scope.tasks.indexOf(taskObj);
+		if(index > -1)
+			{$scope.tasks.splice(index,1);}
+
+	};
+
 	
 }
 
