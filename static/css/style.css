@@ -3,8 +3,20 @@
 	background-color:#DEA2A8;
 }
 
+.row{
+  padding-bottom: 20px;
+  vertical-align: bottom;
+}
+
 .container {
 	width : 1080px;
+}
+
+body {
+	padding-top:200px;
+	font-family: 'Press Start 2P';
+	background-color:#000000;
+	background-image: url(../assets/BG.png);
 }
 
 /* landing */
@@ -17,13 +29,19 @@
 	width : 100%;
 	height : 200px;
 	padding-top : 10px;
-	background-color:#95BFCC;
+	background-color:#696969 ;
 }
 
 #landthird {
 	width : 100%;
 	height : 50px;
-	background-color : #445459;
+	background-color : #241D18 ;
+}
+
+#description{
+	color:#FFFFFF;
+	padding-left: 10px;
+	text-align: left;
 }
 
 /* dashboard */
@@ -42,3 +60,5 @@ input#task-description[type="text"] {
 	height: 60px;
 	line-height: 14px;
 }
+
+
