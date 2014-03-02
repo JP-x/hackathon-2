@@ -38,6 +38,8 @@ function dashboardControl ($scope) {
 				$scope.charIcon = "../assets/cowmove.gif";
 		}
 	}
+
+
 	$scope.addTask = function () {
 		var tmp = new taskObj();
 		
@@ -49,6 +51,8 @@ function dashboardControl ($scope) {
 		$scope.task = new taskObj();
 		$scope.tasks.push ( tmp );
 	};
+
+	
 }
 
 function mainControl ($scope, $http) {
