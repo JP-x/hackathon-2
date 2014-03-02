@@ -8,8 +8,8 @@ function dashboardControl ($scope) {
 			description : "Description",
 			exp : 100,
 			time : new Date(),
-			hour : 24,
-			minute : 60
+			hour : 23,
+			minute : 59
 		};
 	};
 	

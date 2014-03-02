@@ -42,21 +42,30 @@
 	<div id='task-list'>
 		<ul class='list-group' ng-repeat='t in tasks track by $index'>
 			<li class='list-group-item list-group-item-success'>
-				<h1>{{t.time.getUTCHours()}}</h1>
-				<p>{{t.description}}</p>
+				<h4>Time: {{t.time.getUTCHours()}}h {{t.time.getUTCMinutes()}}m</h4>
+				<p><strong>Mission: </strong>{{t.description}}</p>
+				<p><strong>Exp: </strong>{{t.exp}}</p>
 			</li>
 		</ul>
+
 	<!-- task.description exp time .addTask -->
 	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Task</span>
+	
+	<div class="input-group" style='width:100%'>
+		<span class='label label-primary'>Hours</span>
 		<input type="text" class="form-control" ng-model='task.hour'>
 	</div>
+	
+	<div class='input-group' style='width:100%'>
+		<span class='label label-primary'>Minutes</span>
+		<input type="text" class="form-control" ng-model='task.minute'>
+	</div>
 
-	<input type="text" class="form-control" ng-model='task.minute'>
-
-	<input type="text" class="form-control" id = 'task-description' ng-model='task.description'>
+	<div class='input-group' style='width:100%'>
+		<span class='label label-primary'>Description</span>
+		<input type="text" class="form-control" id = 'task-description' ng-model='task.description'>
+	</div>
+	<br \>
 	<button class='btn btn-default' ng-click='addTask()'>Insert Task</button>
 </div>
 </div>
