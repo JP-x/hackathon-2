@@ -14,11 +14,20 @@ app.config(function($routeProvider){
 			controller: 'dashboardControl'
 		})
 
+		.when( '/register', {
+			templateUrl: 'partials/register.html',
+			controller: 'registerControl'
+		})
 		.otherwise({ redirectTo: '/landing' })
 });
 
 //universal controller
 app.controller('mainControl', mainControl );
-app.controller('landingControl', landingControl );
+
 app.controller('dashboardControl', dashboardControl);
+app.controller( 'landingControl', landingControl );
+app.controller('registerControl', function(){
+	return;
+});
+
 })();
