@@ -8,11 +8,17 @@ app.config(function($routeProvider){
 			templateUrl: 'partials/landing.html',
 			controller: 'landingControl'
 		})
-
+		.when( '/register', {
+			templateUrl: 'partials/register.html',
+			controller: 'registerControl'
+		})
 		.otherwise({ redirectTo: '/landing' })
 });
 
 //universal controller
 app.controller('mainControl', mainControl );
 app.controller( 'landingControl', landingControl );
+app.controller('registerControl', function(){
+	return;
+})
 })();
